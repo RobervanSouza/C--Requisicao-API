@@ -22,6 +22,7 @@ using (HttpClient client = new HttpClient())
         musicasPreferidas.AdicionarMusicasFavoritas(musicas[16]);
 
         musicasPreferidas.ExibirMusicasFavoritas();
+        musicasPreferidas.GerarArquivoJson(@"C:\Users\robro\OneDrive\Área de Trabalho\Curso Alura\C#");
     }
     catch (Exception ex)
     {
