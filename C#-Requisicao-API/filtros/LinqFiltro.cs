@@ -13,4 +13,15 @@ internal class LinqFiltro
             Console.WriteLine($" -> {generos}");
         }
     }
+
+    public static void FiltrarArtistaPorGenero(List<Musicas> musicas, string genero)
+    {
+        var artistaPorGenero = musicas.Where(musicas => musicas.Genero!.Contains(genero)).Select(musica => musica.Artista).Distinct().ToList();
+        Console.WriteLine($" Exibindo os artistas por generos -> {genero} ");
+        foreach (var artista in artistaPorGenero)
+        {
+            Console.WriteLine($" -> {artista} ");
+        }
+    }
+
 }
