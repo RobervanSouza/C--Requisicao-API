@@ -13,7 +13,15 @@ using (HttpClient client = new HttpClient())
         //   LinqFiltro.FiltrarTodosGeneros(musicas);
         //LinqOrden.ExibirArtista(musicas);
         //LinqFiltro.FiltrarArtistaPorGenero(musicas, "pop");
-        LinqFiltro.FiltrarMusicas(musicas, "U2");
+        // LinqFiltro.FiltrarMusicas(musicas, "U2");
+        var musicasPreferidas = new MusicasPreferidas("Robervan Souza");
+        musicasPreferidas.AdicionarMusicasFavoritas(musicas[1]);
+        musicasPreferidas.AdicionarMusicasFavoritas(musicas[4]);
+        musicasPreferidas.AdicionarMusicasFavoritas(musicas[8]);
+        musicasPreferidas.AdicionarMusicasFavoritas(musicas[12]);
+        musicasPreferidas.AdicionarMusicasFavoritas(musicas[16]);
+
+        musicasPreferidas.ExibirMusicasFavoritas();
     }
     catch (Exception ex)
     {
